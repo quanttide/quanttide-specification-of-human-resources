@@ -1,0 +1,9 @@
+format: jb-book
+root: index.md
+chapters:
+  - file: staff/README.md
+  - file: departments/README.md
+  - file: commitees/README.md
+  - file: positions/README.md
+  - file: ranks/README.md
+  - file: duties/README.md
