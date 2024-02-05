@@ -2,8 +2,21 @@ format: jb-book
 root: index.md
 chapters:
   - file: staff/README.md
-  - file: departments/README.md
-  - file: commitees/README.md
+    sections: 
+      - file: staff/employee.md
+      - file: staff/employer.md
+  - file: groups/README.md
+    sections:
+      - file: groups/group.md
+      - file: groups/group_relation.md
   - file: positions/README.md
   - file: ranks/README.md
+    sections:
+      - file: ranks/rank.md
   - file: duties/README.md
+    sections:
+      - file: duties/duty.md
+      - file: duties/duty_relation.md
+  - file: bounded_contexts/README.md
+    sections:
+      - file: bounded_contexts/iam.md
