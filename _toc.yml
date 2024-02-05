@@ -1,29 +1,26 @@
 format: jb-book
 root: index.md
-parts:
-  - caption: 组织管理
-    chapters:
-      - file: staff/README.md
+chapters:
+  - file: organizations/README.md
+    sections:
+      - file: organizations/staff/README.md
         sections: 
-          - file: staff/employee.md
-          - file: staff/employer.md
-      - file: groups/README.md
+          - file: organizations/staff/employee.md
+          - file: organizations/staff/employer.md
+      - file: organizations/groups/README.md
         sections:
-          - file: groups/group.md
-          - file: groups/group_relation.md
-      - file: positions/README.md
-      - file: ranks/README.md
+          - file: organizations/groups/group.md
+          - file: organizations/groups/group_relation.md
+      - file: organizations/positions/README.md
+      - file: organizations/ranks/README.md
         sections:
-          - file: ranks/rank.md
-      - file: duties/README.md
+          - file: organizations/ranks/rank.md
+      - file: organizations/duties/README.md
         sections:
-          - file: duties/duty.md
-          - file: duties/duty_relation.md
-      - file: bounded_contexts/README.md
-        sections:
-          - file: bounded_contexts/iam.md
-  - caption: 招聘管理
-    chapters:
+          - file: organizations/duties/duty.md
+          - file: organizations/duties/duty_relation.md
+  - file: recruitment/README.md
+    sections:
       - file: recruitment/applicants/README.md
         sections:
           - file: recruitment/applicants/applicant.md
@@ -31,4 +28,6 @@ parts:
         sections:
           - file: recruitment/reviewers/recruiter.md
           - file: recruitment/reviewers/accessor.md
-     
+  - file: bounded_contexts/README.md
+    sections:
+      - file: bounded_contexts/digital_identities.md
