@@ -18,6 +18,8 @@ chapters:
       - file: organizations/ranks/README.md
         sections:
           - file: organizations/ranks/rank.md
+          - file: organizations/ranks/rank_category.md
+          - file: organizations/ranks/rank_level.md
       - file: organizations/duties/README.md
         sections:
           - file: organizations/duties/duty.md
