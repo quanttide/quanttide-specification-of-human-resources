@@ -12,6 +12,9 @@ chapters:
           - file: organizations/groups/group.md
           - file: organizations/groups/group_relation.md
       - file: organizations/positions/README.md
+        sections:
+          - file: organizations/positions/position.md
+          - file: organizations/positions/position_relation.md
       - file: organizations/ranks/README.md
         sections:
           - file: organizations/ranks/rank.md
