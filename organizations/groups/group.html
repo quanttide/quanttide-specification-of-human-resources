@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'organizations/groups/group';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="员工组关联关系" href="group_relation.html" />
+    <link rel="next" title="员工组所属关系" href="group_relation.html" />
     <link rel="prev" title="员工组" href="README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,16 +187,18 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">员工组</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">员工组</a></li>
-<li class="toctree-l3"><a class="reference internal" href="group_relation.html">员工组关联关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="group_relation.html">员工组所属关系</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../positions/README.html">职务</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../positions/position.html">职务</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../positions/position_relation.html">职务关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../positions/position_relation.html">职务汇报关系</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../ranks/README.html">职级</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ranks/rank.html">职级</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ranks/rank_category.html">职级序列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ranks/rank_level.html">职级等级</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../duties/README.html">职责</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -385,12 +387,22 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>员工组<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>**员工组(<code class="docutils literal notranslate"><span class="pre">EmployeeGroup</span></code>)**是员工的集合。</p>
+<p>字段定义如下：</p>
 <ul class="simple">
 <li><p><strong>ID(<code class="docutils literal notranslate"><span class="pre">id</span></code>)</strong>：系统生成的唯一标识符。</p></li>
 <li><p><strong>标识(<code class="docutils literal notranslate"><span class="pre">name</span></code>)</strong>：用户自定义的标识，租户内唯一，方便计算机程序识别。</p></li>
 <li><p><strong>名称(<code class="docutils literal notranslate"><span class="pre">verbose_name</span></code>)</strong>：用户自定义的名称，方便用户称呼。</p></li>
 <li><p><strong>类型(<code class="docutils literal notranslate"><span class="pre">type</span></code>)</strong>：系统定义的员工组类型。</p></li>
 </ul>
+<p>示例数据如下：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;department-of-finance&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;verbose_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;财务部&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;department&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <section id="id2">
 <h2>员工组类型<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -445,7 +457,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">员工组关联关系</p>
+        <p class="prev-next-title">员工组所属关系</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

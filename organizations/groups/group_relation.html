@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>员工组关联关系 &#8212; 量潮人力资源标准</title>
+    <title>员工组所属关系 &#8212; 量潮人力资源标准</title>
   
   
   
@@ -187,16 +187,18 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">员工组</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="group.html">员工组</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">员工组关联关系</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">员工组所属关系</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../positions/README.html">职务</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../positions/position.html">职务</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../positions/position_relation.html">职务关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../positions/position_relation.html">职务汇报关系</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../ranks/README.html">职级</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ranks/rank.html">职级</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ranks/rank_category.html">职级序列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ranks/rank_level.html">职级等级</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../duties/README.html">职责</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -358,7 +360,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>员工组关联关系</h1>
+    <h1>员工组所属关系</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,14 +375,32 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>员工组关联关系<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p><strong>员工组关联关系(<code class="docutils literal notranslate"><span class="pre">EmployeeGroup</span></code>)</strong></p>
+<h1>员工组所属关系<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>**员工组所属关系(<code class="docutils literal notranslate"><span class="pre">EmployeeGroupRelation</span></code>)**是上下级员工组之间的所属关系。</p>
 <p>字段定义如下：</p>
 <ul class="simple">
 <li><p><strong>ID(<code class="docutils literal notranslate"><span class="pre">id</span></code>)</strong>：系统定义的唯一标识符。</p></li>
-<li><p><strong>父员工组(<code class="docutils literal notranslate"><span class="pre">parent</span></code>)</strong>：</p></li>
-<li><p><strong>子员工组(<code class="docutils literal notranslate"><span class="pre">child</span></code>)</strong>：</p></li>
+<li><p><strong>创建时间(<code class="docutils literal notranslate"><span class="pre">createdAt</span></code>)</strong>：系统维护的创建时间。</p></li>
+<li><p><strong>上级员工组(<code class="docutils literal notranslate"><span class="pre">parent</span></code>)</strong>：用户创建的上级员工组。</p></li>
+<li><p><strong>下级员工组(<code class="docutils literal notranslate"><span class="pre">child</span></code>)</strong>：用户创建的下级员工组。</p></li>
 </ul>
+<p>示例数据如下：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-05T08:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;committee-of-managers&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;verboseName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;负责人委员会&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;child&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;committee-of-human-resources&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;verboseName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;人力资源委员会&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
