@@ -4,7 +4,7 @@ chapters:
   - file: organizations/README.md
     sections:
       - file: organizations/staff/README.md
-        sections: 
+        sections:
           - file: organizations/staff/employee.md
           - file: organizations/staff/employer.md
       - file: organizations/groups/README.md
@@ -24,15 +24,56 @@ chapters:
         sections:
           - file: organizations/duties/duty.md
           - file: organizations/duties/duty_relation.md
-  - file: recruitment/README.md
+  - file: hrbp/README.md
     sections:
-      - file: recruitment/applicants/README.md
+      - file: hrbp/planning/README.md
         sections:
-          - file: recruitment/applicants/applicant.md
-      - file: recruitment/reviewers/README.md
+          - file: hrbp/planning/demand.md
+          - file: hrbp/planning/supply.md
+          - file: hrbp/planning/talentreserve.md
+          - file: hrbp/planning/succession.md
+      - file: hrbp/recruitment/README.md
         sections:
-          - file: recruitment/reviewers/recruiter.md
-          - file: recruitment/reviewers/accessor.md
+          - file: hrbp/recruitment/applicants/README.md
+            sections:
+              - file: hrbp/recruitment/applicants/applicant.md
+          - file: hrbp/recruitment/reviewers/README.md
+            sections:
+              - file: hrbp/recruitment/reviewers/accessor.md
+              - file: hrbp/recruitment/reviewers/recruiter.md
+      - file: hrbp/training/README.md
+        sections:
+          - file: hrbp/training/needs.md
+          - file: hrbp/training/planning.md
+          - file: hrbp/training/individual.md
+      - file: hrbp/performing/README.md
+        sections:
+          - file: hrbp/performing/goal.md
+          - file: hrbp/performing/evaluation.md
+          - file: hrbp/performing/feedback.md
+      - file: hrbp/remunerating/README.md
+        sections:
+          - file: hrbp/remunerating/structure.md
+          - file: hrbp/remunerating/adjustment.md
+      - file: hrbp/employee_relations/README.md
+        sections:
+          - file: hrbp/employee_relations/complaint.md
+          - file: hrbp/employee_relations/dispute.md
+          - file: hrbp/employee_relations/satisfaction.md
+  - file: ssc/README.md
+    sections:
+      - file: ssc/employee/README.md
+        sections:
+          - file: ssc/employee/profile.md
+      - file: ssc/timesheet/README.md
+        sections:
+          - file: ssc/timesheet/record.md
+          - file: ssc/timesheet/type.md
+  - file: coe/README.md
+    sections:
+      - file: coe/coes.md
+      - file: coe/members.md
+      - file: coe/responsibility.md
   - file: bounded_contexts/README.md
     sections:
       - file: bounded_contexts/digital_identities.md
